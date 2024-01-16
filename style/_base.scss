@@ -1,0 +1,50 @@
+$text-color: red;
+@mixin div($altura: 200px, $largura: 200px, $color: lightgray) {
+    height: $altura;
+    width: $largura;
+    background-color: $color;
+}
+
+@mixin centralizar-itens($tipo: central) {
+    @if $tipo == central {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    } @else if $tipo == horizontal {
+        display: flex;
+        justify-content: center;
+    } @else{
+        display: flex;
+        align-items: center;
+    } 
+}
+
+@mixin flex($direction: 0) {
+    display: flex;
+    @if $direction == row{
+        flex-direction: row;
+    } @else if $direction == row-rev{
+        flex-direction: row-reverse;
+    } @else if $direction == column {
+        flex-direction: column;
+    } @else if $direction == column-rev {
+        flex-direction: column-reverse;
+    } @else {
+        background-color: red;
+    }
+}
+
+
+@function addict($dicionario, $chave, $valor) {
+    @return map-merge($dicionario, ("#{$chave}": $valor));
+}
+
+
+// @function listar-classes($nome, $quantia) {
+//     $itens: ();
+//     @for $C from 1 to $quantia {    
+
+//     }
+//     @return $itens;
+// }
+ 

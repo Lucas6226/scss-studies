@@ -1,0 +1,86 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color: blue;
+  color: red;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.conteiner, #especial {
+  height: 500px;
+  width: 500px;
+  background-color: yellow;
+}
+.conteiner > div, #especial > div {
+  height: 100px;
+  width: 200px;
+  background-color: purple;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.conteiner > div p, #especial > div p {
+  color: aqua;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.conteiner .text-1, #especial .text-1 {
+  font-size: calc(6px * 1);
+}
+.conteiner .text-1:hover, #especial .text-1:hover {
+  color: green;
+}
+.conteiner .text-2, #especial .text-2 {
+  font-size: calc(6px * 2);
+}
+.conteiner .text-2:hover, #especial .text-2:hover {
+  color: green;
+}
+.conteiner .text-3, #especial .text-3 {
+  font-size: calc(6px * 3);
+}
+.conteiner .text-3:hover, #especial .text-3:hover {
+  color: green;
+}
+.conteiner .text-4, #especial .text-4 {
+  font-size: calc(6px * 4);
+}
+.conteiner .text-4:hover, #especial .text-4:hover {
+  color: green;
+}
+.conteiner .text-5, #especial .text-5 {
+  font-size: calc(6px * 5);
+}
+.conteiner .text-5:hover, #especial .text-5:hover {
+  color: green;
+}
+.conteiner .text-blue, #especial .text-blue {
+  color: blue;
+  font-weight: 600;
+}
+.conteiner .text-green, #especial .text-green {
+  color: green;
+  font-weight: 600;
+}
+.conteiner .text-red, #especial .text-red {
+  color: red;
+  font-weight: 600;
+}
+.conteiner .text-aqua, #especial .text-aqua {
+  color: aqua;
+  font-weight: 600;
+}/*# sourceMappingURL=main.css.map */

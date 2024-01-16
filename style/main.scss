@@ -1,0 +1,62 @@
+@import 'base'; 
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-color: blue;
+    color: $text-color;
+    height: 100%;
+    @include flex(column);
+    align-items: center;
+}   
+
+$colors: ("color1": blue, "color2": green, "color3": red);
+$colors: addict($colors, "color4", aqua);
+.conteiner {
+    @include div(500px, 500px, yellow);
+
+
+
+    >div {       
+        @include div($altura: 100px, $color: purple);
+        @include centralizar-itens();
+
+        p {
+            color: map-get($colors, "color4");
+            height: fit-content;
+            width: fit-content;
+        }
+    }
+
+    @for $C from 1 to 6 {
+        .#{"text-" + $C} {
+            font-size: calc(6px * #{$C});
+
+            &:hover {
+                color: map-get($colors, color2);
+            }
+        }
+    }
+    
+
+    // crias tres classes de cores diferentes
+    @each $key, $cor in $colors {
+        .#{"text-" + $cor} {
+            color: $cor;
+            font-weight: 600;
+        }
+    }
+}
+
+#especial {
+    @extend .conteiner;
+}
